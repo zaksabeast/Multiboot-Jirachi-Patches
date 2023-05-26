@@ -1,6 +1,6 @@
 .gba
 .arm
-.open "sample0519.bin", "sample0519.patched.bin", 0x2000000
+.open "sample0519.bin", OUT_FILE, 0x2000000
 
 .org 0x2000144
   ; Reset regs (bg, dma, etc.)
@@ -25,10 +25,10 @@
   ldr lr, [compressed_out]
   bx lr
 
-  ; Most emulators load multiboot roms in 0x8000000 instead of 0x2000000.
-  ; Update from 0x2000278 to 0x8000278.
+  ; Most emulators load multiboot roms in 0x8000000 instead of 0x2000000,
+  ; so this needs to be configuable.
   compressed_in:
-    .word 0x8000278
+    .word COMPRESSED_IN_ADDR
   compressed_out:
     .word 0x2018000
 
