@@ -4,5 +4,6 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+chrono = "0.4.28"
 clap = { version = "4.4.2", features = ["derive"] }
 clap-num = "1.0.2"
