@@ -52,7 +52,7 @@
   game_code_addr:
     .word 0x2012ec4
   game_code_patch:
-    ; mov r0, #0x11
+    ; mov r0, #0x11 ; Set game code to US Ruby/Sapphire
     ; bx lr
     .word 0x47702011
 
