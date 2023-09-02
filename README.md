@@ -32,3 +32,15 @@ In other words:
 
 1. Install rust
 2. Run `cargo run -- --help` in the rng reference directory
+
+## Wishing Star error screenshots
+
+These aren't translated. I patched the game for the different error cases and took a screenshot of the message that appeared.
+
+| Screenshot                                                                 | Error                                                                                                                                           |
+| -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![No Pokedex](wishing_star_screenshots/no_pokedex.png)                     | No Pokedex                                                                                                                                      |
+| ![No Save](wishing_star_screenshots/no_save.png)                           | No Save                                                                                                                                         |
+| ![Party Full](wishing_star_screenshots/party_full.png)                     | Party Full                                                                                                                                      |
+| ![Corrupted Save](wishing_star_screenshots/corrupted_save.png)             | Corrupted Save                                                                                                                                  |
+| ![Failed chipset check](wishing_star_screenshots/failed_chipset_check.png) | The text translates to "Received Jirachi", but the Jirachi image is not shown. If I recall correctly, this is caused by a failed chipset check. |
