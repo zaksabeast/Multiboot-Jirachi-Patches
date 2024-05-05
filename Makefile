@@ -1,6 +1,6 @@
-.PHONY: wishing_star meteor wishmaker clean
+.PHONY: wishing_star meteor wishmaker zigzagoon clean
 
-all: wishing_star meteor wishmaker
+all: wishing_star meteor wishmaker zigzagoon
 
 wishing_star:
 	@mkdir -p build/other build/mgba out/other out/mgba
@@ -22,6 +22,13 @@ wishmaker:
 	@armips wishmaker.s -equ COMPRESSED_IN_ADDR 0x2000278 -strequ OUT_FILE "build/mgba/client.patched.bin"
 	@flips -c client.bin build/other/client.patched.bin out/other/client.ips
 	@flips -c client.bin build/mgba/client.patched.bin out/mgba/client.ips
+
+zigzagoon:
+	@mkdir -p build/other build/mgba out/other out/mgba
+	@armips zigzagoon.s -equ COMPRESSED_IN_ADDR 0x8000278 -strequ OUT_FILE "build/other/zigzagoon.patched.bin"
+	@armips zigzagoon.s -equ COMPRESSED_IN_ADDR 0x2000278 -strequ OUT_FILE "build/mgba/zigzagoon.patched.bin"
+	@flips -c zigzagoon.bin build/other/zigzagoon.patched.bin out/other/zigzagoon.ips
+	@flips -c zigzagoon.bin build/mgba/zigzagoon.patched.bin out/mgba/zigzagoon.ips
 
 clean:
 	@rm -rf build out

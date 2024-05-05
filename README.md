@@ -1,12 +1,13 @@
-# Multiboot Jirachi Emulator Patches
+# Multiboot Emulator Patches
 
-These patches allow redeeming a multiboot Jirachi (Wishmaker, Meteor, and Wishing Star) on an emulator without Dolphin. This should mean it's possible for mobile and console emulators to redeem Jirachis too.
+These patches let you play specific multiboot roms on GBA emulators without needing a Gamecube, Wii, or Dolphin. They also fix compatibility issues with emulators and allow multibooting from devices like Arduino or Raspberry Pico.
 
-The patches remove:
+Patches are available for:
 
-- The Gamecube handshake
-- The chipset check
-- The game code check
+- Wishmaker Jirachi
+- Meteor Jirachi
+- Wishing Star Jirachi
+- Berry Patch Zigzagoon
 
 ## Usage
 
